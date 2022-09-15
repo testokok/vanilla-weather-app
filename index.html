@@ -7,11 +7,91 @@
     <title>Vanilla-weather-app</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="src/style.css">
+    <link href="src/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e611a1f08b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>SheCodes</h1> 
+        <div class="card">
+            <div class="card-body">
+              <form id="search-city">
+                <fieldset>
+                  <legend><h1>Vanilla Weather Application</h1></legend>
+                  <div class="row">
+                    <div class="mb-3 col-4">
+                      <input
+                        type="text"
+                        id="textInput"
+                        class="form-control"
+                        placeholder="Enter city here"
+                      />
+                    </div>
+                    <div class="mb-3 col-8">
+                      <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
+                      <!--<button type="clear" class="btn btn-warning" onclick="clearFunction()" value="Clear">Clear</button>-->
+                      <button type="submit" id="current-button" class="btn btn-warning" value="Current">Current</button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <h2 id="city-name">London, UK</h2>
+                    <h2 id="city-temp">
+                      <span id="temp-unit">
+                        19
+                      </span>
+                      <span class="units">
+                        <a href="#" id="unit-cel">°C</a> |
+                        <a href="#" id="unit-fah">°F</a>
+                      </span>
+                    </h2>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-4"><label><span id="dateDay">Friday</span> <span id="dateTime">15:11</span></label></div>
+                    <div class="col-4"><label><span id="dateMonth">August1</span> <span id="dateDate">8</span>, <span id="dateYear">2021</span></label></div>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-3"><label id="description">Clouds</label></div>
+                    <div class="col-3">Wind: <label id="wind">4</label> km/h</div>
+                    <div class="col-3">Humidity: <label id="humidity">40</label> %</div>
+                  </div>
+                  <div class="row weather-blocks">
+                    <div class="col-2 card card-body">
+                      <h5 class="card-title"><i class="fas fa-sun"></i></h5>
+                      <h6>Fr</h6>
+                      <h6 class="card-body">23°</h6>
+                    </div>
+                    <div class="col-2 card card-body">
+                      <h5 class="card-title"><i class="fas fa-cloud-sun"></i></h5>
+                      <h6>Sat</h6>
+                      <h6 class="card-body">20°</h6>
+                    </div>
+                    <div class="col-2 card card-body">
+                      <h5 class="card-title">
+                        <i class="fas fa-cloud-sun-rain"></i>
+                      </h5>
+                      <h6>Sun</h6>
+                      <h6 class="card-body">18°</h6>
+                    </div>
+                    <div class="col-2 card card-body">
+                      <h5 class="card-title"><i class="fas fa-sun"></i></h5>
+                      <h6>Mon</h6>
+                      <h6 class="card-body">23°</h6>
+                    </div>
+                    <div class="col-2 card card-body">
+                      <h5 class="card-title"><i class="fas fa-sun"></i></h5>
+                      <h6>Tue</h6>
+                      <h6 class="card-body">23°</h6>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div> 
     </div>
     
     <script src="src/app.js"></script>
