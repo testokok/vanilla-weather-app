@@ -1,0 +1,62 @@
+body {
+    max-width: 40rem;
+    margin: 3%;
+  }
+  h1 {
+    color: #212529;
+    opacity: 0.5;
+  }
+  h2 {
+    opacity: 0.8;
+    margin-bottom: 0;
+  }
+  h5 {
+    font-size: 2rem;
+    color: #ffc107;
+  }
+  h6 {
+    white-space: nowrap;
+  }
+  h6.card-body {
+    font-size: 1.5em;
+    padding: 1%;
+  }
+  button {
+    opacity: 0.8;
+  }
+  .currency label {
+    color: #212529;
+    opacity: 0.7;
+  }
+  .weather-blocks {
+    margin: 10px 0;
+  }
+  .weather-blocks .card-body {
+    margin: 1%;
+    text-align: center;
+  }
+  h6 {
+    opacity: 0.8;
+  }
+  #city-name, #city-temp{
+    display: inline-block;
+    width: auto;
+  }
+  .units{
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+  }
+  #temp-unit{
+    min-width: 35px;
+    float: left;
+  }
+  .units a{
+    text-decoration: none;
+    opacity: 0.5;
+  }
+  .units a:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
