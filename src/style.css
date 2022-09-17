@@ -59,6 +59,6 @@ body {
     opacity: 1;
     text-decoration: underline;
   }
-  #description{
+  #description:first-letter{
     text-transform: capitalize;
   }
