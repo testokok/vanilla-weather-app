@@ -22,7 +22,7 @@
                 <fieldset>
                   <legend><h1>Vanilla Weather Application</h1></legend>
                   <div class="row">
-                    <div class="mb-3 col-4">
+                    <div class="mb-3 col-8">
                       <input
                         type="text"
                         id="cityInput"
@@ -30,7 +30,7 @@
                         placeholder="Enter city here" autocomplete="off"
                       />
                     </div>
-                    <div class="mb-3 col-8">
+                    <div class="mb-3 col-4">
                       <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
                       <!--<button type="clear" class="btn btn-warning" onclick="clearFunction()" value="Clear">Clear</button>-->
                       <button type="submit" id="current-button" class="btn btn-warning" value="Current">Current</button>
@@ -43,7 +43,7 @@
                       <span id="temp-unit">
                       </span>
                       <span class="units">
-                        <a href="#" id="unit-cel">°C</a> |
+                        <a href="#" id="unit-cel" class="active">°C</a> |
                         <a href="#" id="unit-fah">°F</a>
                       </span>
                     </h2>

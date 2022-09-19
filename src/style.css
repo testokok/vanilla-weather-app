@@ -53,7 +53,6 @@ body {
   }
   .units a{
     text-decoration: none;
-    opacity: 0.5;
   }
   .units a:hover{
     opacity: 1;
@@ -70,4 +69,11 @@ body {
     position: relative;
     top: -18px;
     height: 70px;
+  }
+  .units .active{
+    color: #212529;
+    cursor: default;
+  }
+  .units .active:hover{
+    text-decoration: none;
   }
