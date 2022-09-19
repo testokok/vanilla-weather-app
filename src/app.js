@@ -51,6 +51,20 @@ function handleSubmit(event) {
     search(cityInputElement.value);
 }
 
+function showLocation(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "502dc8f7ae36e57af1974e18d16a86f8";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  
+    axios.get(`${apiUrl}`).then(showTemperature);
+  }  
+
+  function showCurrent(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showLocation);
+  }
+
 function displayFahrenheitTemp(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temp-unit");
@@ -72,6 +86,9 @@ let celsius = null;
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
+
+let currentLocation = document.querySelector("#current-button");
+currentLocation.addEventListener("click", showCurrent);
 
 let fahrenheit = document.querySelector("#unit-fah");
 fahrenheit.addEventListener("click", displayFahrenheitTemp);
