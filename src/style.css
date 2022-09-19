@@ -11,15 +11,19 @@ body {
     margin-bottom: 0;
   }
   h5 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #ffc107;
   }
   h6 {
     white-space: nowrap;
+    font-size: 1.1em;
   }
   h6.card-body {
-    font-size: 1.5em;
+    font-size: 1.1em;
     padding: 1%;
+  }
+  h6.card-body .forecast-temp-min{
+    opacity: 0.5;
   }
   button {
     opacity: 0.8;
