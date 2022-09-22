@@ -17,6 +17,25 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes} ${month} ${datenumber}, ${year}`;
 }
 
+function displayForecast () {
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = "";
+    let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+            <div class="col-2 card card-body">
+            <h6>${day}</h6>
+            <h5 class="card-title"><i class="fas fa-sun"></i></h5>
+            <h6 class="card-body">
+            <span class="forecast-temp-max">23°</span>
+            <span class="forecast-temp-min">18°</span>
+            </h6>
+            </div>
+        `;
+    });
+    forecastElement.innerHTML = forecastHTML;
+}
+
 
 function showTemperature(response) {
     let temperatureElement = document.querySelector("#temp-unit");
@@ -83,6 +102,8 @@ function displayCelsiusTemp(event) {
 }
 
 let celsius = null;
+
+displayForecast();
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
