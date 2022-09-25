@@ -25,6 +25,9 @@ body {
   h6.card-body .forecast-temp-min{
     opacity: 0.5;
   }
+  a{
+    text-decoration: none;
+  }
   button {
     opacity: 0.8;
   }
