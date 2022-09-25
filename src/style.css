@@ -51,10 +51,6 @@ body {
     position: relative;
     top: -10px;
   }
-  #temp-unit{
-    min-width: 35px;
-    float: left;
-  }
   .units a{
     text-decoration: none;
   }

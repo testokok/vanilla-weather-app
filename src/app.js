@@ -111,7 +111,7 @@ function showLocation(position) {
     navigator.geolocation.getCurrentPosition(showLocation);
   }
 
-function displayFahrenheitTemp(event) {
+/*function displayFahrenheitTemp(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temp-unit");
     celsiusLink.classList.remove("active");
@@ -128,7 +128,7 @@ function displayCelsiusTemp(event) {
     temperatureElement.innerHTML = Math.round(celsius);
 }
 
-let celsius = null;
+let celsius = null;*/
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
@@ -136,10 +136,10 @@ form.addEventListener("submit", handleSubmit);
 let currentLocation = document.querySelector("#current-button");
 currentLocation.addEventListener("click", showCurrent);
 
-let fahrenheit = document.querySelector("#unit-fah");
+/*let fahrenheit = document.querySelector("#unit-fah");
 fahrenheit.addEventListener("click", displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#unit-cel");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
+celsiusLink.addEventListener("click", displayCelsiusTemp);*/
 
 search("Kyiv");
